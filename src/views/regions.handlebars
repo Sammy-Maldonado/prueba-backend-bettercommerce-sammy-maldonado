@@ -1,0 +1,15 @@
+<div>
+  <h1>Regiones de Chile</h1>
+  <select id="regionSelector">
+    <option value="">Seleccione una región</option>
+    {{#each regions}}
+    <option value="{{this._id}}">{{this.region}}</option>
+    {{/each}}
+  </select>
+
+  <select id="communeSelector">
+    <option value="">Seleccione una comuna</option>
+  </select>
+
+  <script src="../public/js/selectors.js"></script>
+</div>
