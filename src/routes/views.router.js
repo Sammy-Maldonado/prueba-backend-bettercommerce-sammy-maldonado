@@ -1,19 +1,20 @@
 import { Router } from "express";
 import RegionsManager from "../dao/mongo/Managers/RegionsManager.js";
-import CommunesManager from "../dao/mongo/Managers/CommunesManager.js"
 
 const router = Router();
 
+/* Services */
 const regionsServices = new RegionsManager();
-const communesServices = new CommunesManager();
 
+/* Obteniendo la información de las regiones con Mongoose*/
 router.get('/', async (req, res) => {
   try {
-      const regions = await regionsServices.getRegions().lean();
-      res.render('regions', { regions });
+    const regions = await regionsServices.getRegions().lean(); //deshidratando la información para renderizarla
+    res.render('regions', { regions, css: 'regions'});
   } catch (error) {
-      console.error(error);
-      res.status(500).send('Error al cargar las regiones');
+    console.error(error);
+    res.status(500).send('Error al cargar las regiones');
   }
 });
+
 export default router;

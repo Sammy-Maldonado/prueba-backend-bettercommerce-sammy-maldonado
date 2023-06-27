@@ -2,6 +2,8 @@ import communesModel from "../models/communes.js";
 
 export default class CommunesManager {
 
+  /* Crud de Communes */
+
   getCommunes = (params) => {
     return communesModel.find(params);
   }
@@ -15,7 +17,7 @@ export default class CommunesManager {
   }
 
   updateCommune = (id, commune) => {
-    return communesModel.findByIdAndUpdate(id, {$set: commune})
+    return communesModel.findByIdAndUpdate(id, { $set: commune })
   }
 
   deleteCommune = (id) => {

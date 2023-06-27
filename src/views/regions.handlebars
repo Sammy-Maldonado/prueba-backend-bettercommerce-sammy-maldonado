@@ -1,15 +1,20 @@
-<div>
-  <h1>Regiones de Chile</h1>
-  <select id="regionSelector">
-    <option value="">Seleccione una región</option>
-    {{#each regions}}
-    <option value="{{this._id}}">{{this.region}}</option>
-    {{/each}}
-  </select>
+{{!-- Vista de los selectores de regiones y comuna --}}
 
-  <select id="communeSelector">
-    <option value="">Seleccione una comuna</option>
-  </select>
+<div class="container">
+  <h1 class="m-3 mt-5">Regiones de Chile</h1>
 
-  <script src="../public/js/selectors.js"></script>
+  <div>
+    <select class="select-btn btn dropdown-toggle" onchange="regionSelected(value)" id="regionSelector">
+      <option value="{{this.region}}">Seleccione una región</option>
+      {{#each regions}}
+      <option class="dropdown-item" value="{{this.id}}">{{this.region}}</option>
+      {{/each}}
+    </select>
+
+    <select class="select-btn btn dropdown-toggle" id="communeSelector">
+      <option value="{{this.commune}}">Seleccione una comuna</option>
+    </select>
+  </div>
 </div>
+
+<script src="/js/selectors.js"></script>

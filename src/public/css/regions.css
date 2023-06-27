@@ -1,0 +1,22 @@
+/* Estilos de regions.handlebars */
+h1 {
+  font-family: 'Roboto', sans-serif;
+}
+
+select {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select-btn {
+  border-color: black;
+  background-color: #f7f7f7;
+  box-shadow: 0.1em 0.1em 0.2em;
+  --bs-btn-hover-border-color: black;
+}

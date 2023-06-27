@@ -4,6 +4,7 @@ import RegionsManager from "../dao/mongo/Managers/RegionsManager.js";
 const regionManager = new RegionsManager();
 const router = Router();
 
+/*Endpoint para obtener la información de las regiones*/
 router.get('/', async (req, res) => {
   try {
     const regions = await regionManager.getRegions();

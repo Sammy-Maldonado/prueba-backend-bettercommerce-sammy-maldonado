@@ -2,6 +2,8 @@ import regionsModel from "../models/regions.js";
 
 export default class RegionsManager {
 
+  /* Crud de Regions */
+
   getRegions = (params) => {
     return regionsModel.find(params);
   }

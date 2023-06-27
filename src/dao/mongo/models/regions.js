@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 
 const collection = "regions";
 
+/* Esquema para integrar regiones a la base de datos */
+
 const schema = new mongoose.Schema({
   id: Number,
   region: String,
